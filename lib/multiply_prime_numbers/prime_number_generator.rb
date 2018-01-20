@@ -27,6 +27,6 @@ class PrimeNumbers
   end
 
   def check_args(number)
-    raise ArgumentError, 'Argument must be positive integer' if number < 0 || !number.is_a?(Integer)
+    raise ArgumentError, 'Argument must be positive integer' if !number.is_a?(Integer) || number < 1
   end
 end

@@ -1,4 +1,4 @@
-require './lib/table_generator.rb'
+require './lib/multiply_prime_numbers/table_generator.rb'
 
 describe TableGenerator do
   before(:each) do
@@ -7,7 +7,7 @@ describe TableGenerator do
   end
 
   it 'generates a header' do
-    expected_header = ['', 2, 3, 5]
+    expected_header = [nil, 2, 3, 5]
 
     expect(@table_generator.header).to eq(expected_header)
   end

@@ -1,5 +1,5 @@
-class PrimeNumbers
-  def generate(number)
+module PrimeNumberGenerator
+  def self.generate(number)
     check_args(number)
 
     prime_numbers = [2]
@@ -18,7 +18,7 @@ class PrimeNumbers
 
   private
 
-  def is_prime?(number_to_test)
+  def self.is_prime?(number_to_test)
     (2..(number_to_test-1)).each do |i|
       return false if number_to_test % i == 0
     end
@@ -26,7 +26,7 @@ class PrimeNumbers
     true
   end
 
-  def check_args(number)
+  def self.check_args(number)
     raise ArgumentError, 'Argument must be positive integer' if !number.is_a?(Integer) || number < 1
   end
 end

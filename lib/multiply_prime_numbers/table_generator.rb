@@ -4,7 +4,7 @@ class TableGenerator
   end
 
   def header
-    @numbers.clone.unshift('')
+    @numbers.clone.unshift(nil)
   end
 
   def rows

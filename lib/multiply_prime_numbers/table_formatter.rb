@@ -1,10 +1,15 @@
-require 'terminal-table'
+require 'terminal-table/import'
 
-class TableFormatter
-  def draw(headings, rows)
-    table = Terminal::Table.new
-    table.headings = headings
-    table.rows = rows
-    table
+module TableFormatter
+  TABLE_STYLE = {
+    border_top: false,
+    border_bottom: false,
+    alignment: :right
+  }
+
+  def self.draw(headings, rows)
+    t = table(headings, *rows)
+    t.style = TABLE_STYLE
+    t
   end
 end

@@ -1,0 +1,8 @@
+#!/usr/local/bin/ruby -w
+require './lib/multiply_prime_numbers.rb'
+
+number_of_primes = ARGV[0]
+
+puts "Creating multiplication table for #{number_of_primes} prime numbers ...\n"
+
+MultiplyPrimeNumbers.print(number_of_primes.to_i)

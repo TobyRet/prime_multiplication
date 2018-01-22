@@ -7,20 +7,21 @@ class TableGenerator
     @numbers.clone.unshift(nil)
   end
 
-  def rows
+  def rows(operator)
     @numbers.map do |number|
-      create_row_from(number)
+      create_row_from(number, operator)
     end
   end
 
   private
 
-  def create_row_from(number)
+  def create_row_from(number, operator)
     row_name = number
     row = [row_name]
 
     @numbers.each do |i|
-      row.push(row_name * i)
+      cell_value = row_name.send(operator, i)
+      row.push(cell_value)
     end
 
     row

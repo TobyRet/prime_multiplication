@@ -7,7 +7,7 @@ module MultiplyPrimeNumbers
     prime_numbers = PrimeNumberGenerator.generate(number_of_primes)
     table_generator = TableGenerator.new(prime_numbers)
     headers = table_generator.header
-    rows = table_generator.rows
+    rows = table_generator.rows(:*)
 
     puts TableFormatter.draw(headers, rows)
   end

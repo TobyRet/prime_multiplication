@@ -16,4 +16,9 @@ ruby run [amount_of_primes_to_generate]
 
 ```
 
+### Known Issues
+
+- I was not able to achieve the exact table formatting as specified in the problem description. 
+I examined the table-terminal gem's source code and did not see an option to have a single vertical column. 
+
 
